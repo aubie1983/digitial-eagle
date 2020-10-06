@@ -1,14 +1,13 @@
 const express = require('express')
 const fs = require('fs')
 const app = express()
+const path = require('path')
 var port = process.env.PORT || 3000
-var html = fs.readFileSync('index.html')
 
 app.get('/',(req, res) => {
-   res.send('How does this work')
+   res.sendFile(path.join(__dirname+ '/index.html'))
 
 })
-
 
 app.listen(port, ()=>{
     console.log("Terminal is running")
