@@ -7,6 +7,44 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
     body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
 </style>
 <body class="w3-light-grey">
 
@@ -26,6 +64,17 @@ and is wrapped around the whole page content, except for the footer in this exam
         <!-- ALL Blog Blog Entry Start -->
         <div class="w3-col l8 s12">
 
+
+            <!-- Jameson Announcement Start -->
+            <div class="w3-card-4 w3-margin w3-white">
+                <div class="w3-container">
+                    <h3><b>Welcome Jameson Steward</b></h3>
+                    <h5>The Elders - <span class="w3-opacity">December 16, 2020</span></h5>
+                    <p> <img  style="width:200px;float:left; padding:5px" src="steward_headshot.jpg" alt="Jameson Steward">As you may recall, Bro. Bill Irby announced his retirement several months ago.  The Elders have been working to find his replacement.  We are pleased to announce that Jameson Steward has accepted our offer to be the full-time pulpit minister at the West Hobbs Street Church of Christ.  Jameson and his family will be here sometime in February 2021.  Click <button id="myBtn">here</button> for more info on Jameson and his family.</p>
+                </div>
+            </div>
+            <hr>
+            <!-- Jameson Announcement End -->
 
             <!-- Blog Entry Start -->
             <div class="w3-card-4 w3-margin w3-white">
@@ -175,6 +224,67 @@ and is wrapped around the whole page content, except for the footer in this exam
     <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
     <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer> -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+            <div class="w3-container">
+        <h1 style="text-align: center">Meet the Stewards</h1>
+        <p><img  style="display:block; margin-left:auto; margin-right: auto" src="steward_family.jpg" alt="Jameson Steward Family"></p>
+                <p style="text-align:center"><b>left to right - Cason (2yrs), Jameson, Nate (5 yrs), Ava Drew (4 months) & Ashley</b></p>
+                <p>We are a family of five with the most recent addition - Ava Drew – being born in July of 2020.  We are working to train our children to want to become Christians when they grow up, first and foremost.  We try to spend time each night with them reading from one of their Bible storybooks, singing and praying.</p>
+
+                <p>Ashley and I have been married for 7 years.  We were married in June of 2013, at her home congregation, the Verona Church of Christ.  We were blessed to have godly parents who raised us to be Christians.  Ashley attended Tupelo High School and I was homeschooled until college.  We met our junior year of high school at Maywood Christian Camp in Hamilton, Alabama – and the rest they say is history.</p>
+
+                <p>Our goals as a family are to be the best servants for Christ we can be, and to help others in their time of need.</p>
+
+                <p>Ashley received her college degree in Elementary Education from the University of Mississippi, and has taught kindergarten in Tupelo, Mississippi.  Her knowledge and passion for teaching have helped her in teaching Bible classes as well as helping parents with young children who may have questions or concerns about their child’s education.</p>
+
+                <p>I received a Bachelor of Business Administration from the University of Mississippi in 2015 and graduated from the Memphis School of Preaching in 2018.  While studying at the Memphis School of Preaching I served as a Preacher-Intern at the Nesbit Church of Christ in Nesbit, MS.  In June of 2018 I became the full-time pulpit minister at the Smithville Church of Christ in Smithville, MS.</p>
+
+                <p>At Smithville Church of Christ, I served as editor of “The Community Messenger”, which in April reached 1 million people worldwide.  I also host a podcast called “Asking God Why”.  This podcast is designed to reach younger audiences who are searching for the truth.  Additionally I’ve been fortunate to work with the Gospel Broadcasting Network where I co-host a show called “Finding Jesus Today”.</p>
+
+                <p>As a family, we enjoy sports, spending time outside, visiting with our families and reading.  We do our best to make sure that we spend quality time together as a family.  We have already taken the boys to quite a few baseball, basketball and football games.  We genuinely enjoy and cherish all the time we get to spend together.</p>
+
+                <p>We are excited about the opportunity we have to work with the West Hobbs Street Church of Christ and are looking forward to our move to Athens.</p>
+                <p style="text-align: right">-- Jameson</p>
+
+            </div>
+
+    </div>
+
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 
 </body>
 </html>
